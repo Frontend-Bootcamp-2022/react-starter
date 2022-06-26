@@ -1,0 +1,21 @@
+.button {
+  display: block;
+  margin-right: 20px;
+  padding: 10px 20px;
+
+  border: 0;
+  background-color: rgb(163, 201, 86);
+  border-radius: 6px;
+}
+
+.button.blue {
+  background-color: rgb(141, 162, 228);
+}
+
+.button.red {
+  background-color: rgb(141, 162, 228);
+}
+
+.button.yellow {
+  background-color: rgb(141, 162, 228);
+}

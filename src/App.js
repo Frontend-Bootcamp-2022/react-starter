@@ -1,8 +1,12 @@
-function App() {
+import Header from "./components/Header/Header";
+import "./App.css";
+
+const App = () => {
+
   return (
-    <header>
-      <h1>Kodluyoruz React Bootcamp</h1>
-    </header>
+    <section className="app">
+      <Header></Header>
+    </section>
   );
 }
 
