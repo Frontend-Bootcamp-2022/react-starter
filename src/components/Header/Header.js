@@ -10,20 +10,18 @@ const Header = () => {
   const subtitle = "Bootcamp Haziran - Aralik";
   const bootcampDate = new Date();
 
-  const data = {
-    name: "Tolga",
-    age: 2
-  }
-
-  //console.log("bootcampDate", bootcampDate.getFullYear())
-
   return (
     <header className="header">
-      <span>{bootcampDate.toLocaleDateString("tr", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+      <span className="header__date">{bootcampDate.toLocaleDateString("tr", { year: 'numeric' })}</span>
 
       <Wrapper className="column">
         <h1 className="header__title">{title}</h1>
         <HeaderSub text={subtitle} bootcampDate={bootcampDate} />
+        <p className="header__content">
+          Hayalindeki yazılım kariyerine ilk adımı at
+          <br />
+          Türkiye'yi teknolojide bir yetenek merkezi yapmak için gençlere ihtiyaçları olan eğitimi sağlıyoruz.
+        </p>
       </Wrapper>
 
       <Wrapper>

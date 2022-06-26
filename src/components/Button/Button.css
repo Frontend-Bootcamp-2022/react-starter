@@ -1,21 +1,17 @@
 .button {
   display: block;
   margin-right: 20px;
-  padding: 10px 20px;
+  padding: 20px 40px;
 
   border: 0;
   background-color: rgb(163, 201, 86);
   border-radius: 6px;
+
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .button.blue {
-  background-color: rgb(141, 162, 228);
-}
-
-.button.red {
-  background-color: rgb(141, 162, 228);
-}
-
-.button.yellow {
   background-color: rgb(141, 162, 228);
 }
