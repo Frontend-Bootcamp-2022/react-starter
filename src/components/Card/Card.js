@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../Button/Button";
+import ButtonTicket from "../Button/ButtonTicket";
 import style from "./Card.module.scss";
 
 const Card = (props) => {
@@ -9,16 +9,22 @@ const Card = (props) => {
 
 
   const reserveHandler = () => {
-    setLimitOfLesson(9)
-    console.log("limitOfLesson", limitOfLesson);
+    if (limitOfLesson === "Tukendi") return;
+    let hasLimit = limitOfLesson - 1;
+
+    if (!hasLimit) {
+      setLimitOfLesson("Tukendi");
+      return;
+    }
+
+    setLimitOfLesson(hasLimit);
   }
 
   return (
     <div className={style.card}>
       <div className={style.card__name}>{props.name}</div>
       <div className={style.card__date}>{props.date.toLocaleDateString("tr", { year: 'numeric', month: "long" })}</div>
-      {/* <Button text={props.limit} /> */}
-      <button className={style.card__limit} onClick={reserveHandler}>{limitOfLesson}</button>
+      <ButtonTicket text={limitOfLesson} onClickAction={reserveHandler} />
     </div>
   )
 }
